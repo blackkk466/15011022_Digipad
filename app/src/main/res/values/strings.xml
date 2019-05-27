@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">15011022_Digipad</string>
+    
+    <string-array name="priorities">
+        <item>Düşük</item>
+        <item>Normal</item>
+        <item>Yüksek</item>
+    </string-array>
+</resources>

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:id="@+id/detailFirstView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+
+        <EditText
+            android:id="@+id/detailHeadline"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:textSize="24sp"
+            android:inputType="text"
+            android:hint="Baslik"
+            android:textAlignment="viewStart"
+            android:paddingHorizontal="12dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignBottom="@+id/detailDateView"
+            android:layout_toStartOf="@+id/detailColorButton"
+            android:layout_alignParentTop="true"/>
+
+        <TextView
+            android:id="@+id/detailPriorityView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/detailHeadline"
+            android:textSize="18sp"
+            android:textAlignment="center"/>
+
+        <Spinner
+            android:id="@+id/detailPrioritySpinner"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/detailPriorityView"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/detailHeadline">
+        </Spinner>
+
+        <Button
+            android:id="@+id/detailColorButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/detailPrioritySpinner"
+            android:text="Renk"/>
+
+        <TextView
+            android:id="@+id/detailDateView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@id/detailHeadline"
+            android:layout_below="@id/detailColorButton"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/detailContent"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingHorizontal="12dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/detailFirstView"
+        app:layout_constraintStart_toStartOf="parent"/>
+    
+    <RelativeLayout
+        android:id="@+id/detailThirdView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintVertical_chainStyle="packed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <Button
+            android:id="@+id/detailAlarmButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="@android:drawable/ic_popup_reminder"
+            android:layout_alignParentStart="true"/>
+
+        <Button
+            android:id="@+id/detailDelete"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:background="@android:drawable/ic_menu_delete"
+            android:layout_toStartOf="@+id/detailUpdateButton"/>
+
+        <Button
+            android:id="@+id/detailUpdateButton"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_margin="5dp"
+            android:layout_alignParentEnd="true"
+            android:background="@android:drawable/ic_menu_save"/>
+
+    </RelativeLayout>
+
+
+
+
+</android.support.constraint.ConstraintLayout>
